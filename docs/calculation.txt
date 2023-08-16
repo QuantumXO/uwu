@@ -1,0 +1,32 @@
+для расчета апр
+
+колишь этот контрат
+0xB0D502E938ed5f4df2E681fE6E419ff29631d62b
+
+- total alloc point
+- stargate per block
+- pool info (передаешь 0)
+
+так же тебе нужна цена STG coingecko api - 0.50$ сейчас примерно
+
+теперь делаем расчет
+
+1. stargate per block / 10^18 / 12 * 60 *60 *24 * 365 * stargate price = total year $ rewards
+2. Alloc point (pool info) / total alloc point = pool share
+3. total year $ rewards * pool share = pool year $ rewards
+
+
+Теперь еолим контракт
+0xdf0770dF86a8034b3EFEf0A1Bb3c889B8332FF56
+
+- total liquidity
+
+total liquidity / 10^6 = Pool value
+
+
+pool year $ rewards/Pool value *100 = APY
+
+1. вывести апр
+2. обновить апишку
+3. проверить ETH на дешборде и депозите
+stake -> current vesting -> 0

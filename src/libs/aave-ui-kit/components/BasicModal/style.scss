@@ -1,0 +1,92 @@
+@import './../../_mixins/screen-size';
+@import './../../_mixins/vars';
+
+.ReactModal__Overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0) !important;
+  position: relative;
+  z-index: 99;
+  backdrop-filter: blur(1.4rem);
+}
+
+.ReactModal__Content {
+  padding: 32px;
+  position: relative;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  left: auto;
+  border: none;
+  width: 626px;
+  max-width: 626px;
+  border-radius: 24px;
+  margin: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  background: linear-gradient(
+    68deg,
+    rgba(11, 7, 66, 1) 30%,
+    rgba(8, 5, 46, 1) 50%,
+    rgba(11, 7, 66, 1) 70%
+  );
+  box-shadow: 0px 4px 4px rgba(4, 2, 27, 0.2);
+  backdrop-filter: blur(15px);
+
+  @include respond-to(sm) {
+    padding: 30px 20px 40px;
+  }
+}
+
+.BasicModal__dark.ReactModal__Content {
+  background: $white;
+}
+
+.BasicModal__close-wrapper {
+  position: absolute;
+  top: 14px;
+  right: 35px;
+  z-index: 5;
+}
+
+.BasicModal__close {
+  border: 0;
+  background: transparent;
+  position: fixed;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 0;
+  line-height: 0;
+  margin: 0;
+  img {
+    width: 13px;
+    height: 13px;
+    @include respond-to(xl) {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.BasicModal__close:hover {
+  opacity: 0.7;
+}
+
+.BasicModal__close:active {
+  transform: scale(0.8);
+}
+
+@media only screen and (max-height: 400px) {
+  .ReactModal__Content.ReactModal__Content--after-open {
+    position: absolute !important;
+    top: 5% !important;
+    bottom: 5% !important;
+    display: block;
+    overflow: auto !important;
+  }
+}

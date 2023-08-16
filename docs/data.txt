@@ -1,0 +1,11 @@
+0xem, [14.10.22 09:18]
+@sarangparikh Hi, I have a couple of questions:
+1. I'm trying to understand how the minOut parameter is calculated for depositUnderlyingToVault and withdrawUnderlyingFromVault functions, could you, please, provide more information?
+2. computeVaultAddress function just need to get the pre-address without actual Vault creation, right? I'm just trying to understand that deeper
+
+Sarang Parikh, [14.10.22 13:43]
+Hello @shadowuserem! Great questions!
+
+1) Yes, the minOut is calculated based upon the previewDeposit function on the vault. It makes sure that you should always get the minimum share that you expected, same goes with withdraw but in withdraw it is amounts. There is a first deposit attack vector on vaults, this parameter also protects from that attack vector. I can talk more on the attack vector in detail if you want :)
+
+2) Yes, correct, the computeVaultAddress is just a function to pre compute the address without actually creating the vault.

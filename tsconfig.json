@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext", "es6", "ScriptHost", "ES2016.Array.Include"],
+    "types": [],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "rootDir": "./src",
+    // "noImplicitReturns": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "jsx": "react-jsx",
+    "useUnknownInCatchVariables": false
+  },
+  "include": [
+    "src",
+    "node_modules/babel-plugin-react-intl-auto/**/*.d.ts",
+  ]
+}
